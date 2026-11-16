@@ -1,0 +1,308 @@
+* {
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+
+body {
+
+    min-height:100vh;
+
+    background:#050505;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+}
+
+
+
+/* BRILHO DE FUNDO */
+
+
+body::before {
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    background:#00ff88;
+
+    opacity:.15;
+
+    filter:blur(180px);
+
+    top:-150px;
+
+    left:-150px;
+
+}
+
+
+
+body::after {
+
+    content:"";
+
+    position:absolute;
+
+    width:400px;
+
+    height:400px;
+
+    background:#00ff88;
+
+    opacity:.08;
+
+    filter:blur(150px);
+
+    bottom:-100px;
+
+    right:-100px;
+
+}
+
+
+
+
+.login-container {
+
+    width:100%;
+
+    max-width:450px;
+
+    padding:30px;
+
+    position:relative;
+
+    z-index:1;
+
+}
+
+
+
+
+.brand {
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.logo {
+
+    font-size:40px;
+
+    font-weight:900;
+
+    letter-spacing:5px;
+
+}
+
+
+
+.logo span {
+
+    color:#00ff88;
+
+}
+
+
+
+.brand p {
+
+    color:#888;
+
+    margin-top:10px;
+
+}
+
+
+
+
+
+.login-box {
+
+    background:#0b0b0b;
+
+    border:1px solid #222;
+
+    border-radius:30px;
+
+    padding:40px;
+
+    box-shadow:0 0 50px rgba(0,255,136,.1);
+
+}
+
+
+
+.login-box h1 {
+
+    font-size:32px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.login-box > p {
+
+    color:#888;
+
+    margin-bottom:30px;
+
+}
+
+
+
+
+
+form {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+
+input {
+
+    width:100%;
+
+    padding:18px;
+
+    background:#111;
+
+    border:1px solid #222;
+
+    border-radius:15px;
+
+    color:white;
+
+    outline:none;
+
+    font-size:16px;
+
+}
+
+
+
+input:focus {
+
+    border-color:#00ff88;
+
+}
+
+
+
+input::placeholder {
+
+    color:#777;
+
+}
+
+
+
+
+
+button {
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#00ff88;
+
+    color:#050505;
+
+    font-weight:bold;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+button:hover {
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 25px rgba(0,255,136,.4);
+
+}
+
+
+
+
+
+.register {
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#888;
+
+}
+
+
+
+.register a {
+
+    color:#00ff88;
+
+    text-decoration:none;
+
+}
+
+
+
+@media(max-width:500px){
+
+
+.login-box {
+
+    padding:30px;
+
+}
+
+
+
+.login-box h1 {
+
+    font-size:26px;
+
+}
+
+
+}
