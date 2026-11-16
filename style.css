@@ -201,4 +201,331 @@ h1 span,
 .numbers p {
     color:#b8b8c7;
     font-size:14px;
+}/* CARD DA IA */
+
+.hero-visual {
+    display:flex;
+    justify-content:center;
+}
+
+
+.ai-card {
+
+    width:350px;
+    padding:40px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(20px);
+
+    text-align:center;
+
+    box-shadow:0 0 50px rgba(0,217,255,.15);
+
+}
+
+
+
+.icon {
+
+    font-size:70px;
+
+}
+
+
+
+.ai-card h3 {
+
+    font-size:30px;
+
+    margin:20px 0;
+
+}
+
+
+
+.ai-card p {
+
+    color:#b8b8c7;
+
+}
+
+
+
+.dots span {
+
+    display:inline-block;
+
+    width:10px;
+
+    height:10px;
+
+    background:#00d9ff;
+
+    border-radius:50%;
+
+    margin:20px 5px;
+
+    animation:pulse 1.5s infinite;
+
+}
+
+
+
+@keyframes pulse {
+
+    50% {
+
+        transform:scale(1.5);
+
+        opacity:.5;
+
+    }
+
+}
+
+
+/* SEÇÕES */
+
+
+.features,
+.about,
+.steps {
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:100px 40px;
+
+}
+
+
+
+.features,
+.steps {
+
+    text-align:center;
+
+}
+
+
+
+.features h2,
+.about h2,
+.steps h2,
+.contact h2 {
+
+    font-size:45px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.features > p,
+.about p,
+.contact p {
+
+    color:#b8b8c7;
+
+}
+
+
+
+/* CARDS */
+
+
+.cards {
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    margin-top:50px;
+
+}
+
+
+
+.card {
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    transition:.4s;
+
+}
+
+
+
+.card:hover {
+
+    transform:translateY(-10px);
+
+    border-color:#00d9ff;
+
+}
+
+
+
+.card div {
+
+    font-size:45px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.card h3 {
+
+    font-size:25px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.card p {
+
+    line-height:1.6;
+
+}
+
+
+
+/* SOBRE */
+
+
+.about-content {
+
+    text-align:center;
+
+    max-width:750px;
+
+    margin:auto;
+
+}
+
+
+
+.about-box {
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    margin-top:60px;
+
+}
+
+
+
+.about-box div {
+
+    padding:30px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.1);
+
+}
+
+
+
+/* PASSOS */
+
+
+.step-container {
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    margin-top:50px;
+
+}
+
+
+
+.step span {
+
+    display:flex;
+
+    width:60px;
+
+    height:60px;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:linear-gradient(90deg,#6c3cff,#00d9ff);
+
+}
+
+
+
+/* CTA */
+
+
+.cta {
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:80px 40px;
+
+}
+
+
+
+.cta-box {
+
+    text-align:center;
+
+    padding:70px 30px;
+
+    border-radius:35px;
+
+    background:linear-gradient(
+    135deg,
+    rgba(108,60,255,.3),
+    rgba(0,217,255,.2)
+    );
+
+}
+
+
+
+.cta-box h2 {
+
+    font-size:45px;
+
 }
