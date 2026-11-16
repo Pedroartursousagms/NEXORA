@@ -1,7 +1,7 @@
-// ANIMAÇÃO AO APARECER NA TELA
+// ANIMAÇÃO AO ENTRAR NA TELA
 
 const elementos = document.querySelectorAll(
-    ".card, .step, .about-box div, .hero-text, .hero-visual"
+    ".card, .feature-item, .screen, .experience-box"
 );
 
 
@@ -11,26 +11,22 @@ const observer = new IntersectionObserver((entradas)=>{
 
         if(entrada.isIntersecting){
 
-            entrada.target.style.opacity = "1";
-            entrada.target.style.transform = "translateY(0)";
+            entrada.target.classList.add("mostrar");
 
         }
 
     });
 
-},{
 
-    threshold:0.15
+}, {
+
+    threshold: 0.15
 
 });
 
 
 
 elementos.forEach((elemento)=>{
-
-    elemento.style.opacity = "0";
-    elemento.style.transform = "translateY(40px)";
-    elemento.style.transition = "0.8s ease";
 
     observer.observe(elemento);
 
@@ -67,74 +63,94 @@ botoes.forEach((botao)=>{
 
 
 
-// BOTÃO COMEÇAR
 
-const iniciar = document.querySelector(".primary-btn");
-
-
-if(iniciar){
-
-    iniciar.addEventListener("click",()=>{
-
-        document
-        .querySelector("#recursos")
-        .scrollIntoView({
-
-            behavior:"smooth"
-
-        });
-
-    });
-
-}
+// SCROLL SUAVE NOS LINKS
 
 
+document.querySelectorAll("a").forEach(link=>{
 
 
-// EFEITO DE DIGITAÇÃO NA IA
-
-const textoIA = document.querySelector(".ai-card p");
+    link.addEventListener("click",(evento)=>{
 
 
-if(textoIA){
-
-    const textoOriginal = textoIA.innerHTML;
-
-    textoIA.innerHTML = "";
-
-    let contador = 0;
+        const destino = document.querySelector(
+            link.getAttribute("href")
+        );
 
 
-    function escrever(){
+        if(destino){
 
-        if(contador < textoOriginal.length){
+            evento.preventDefault();
 
-            textoIA.innerHTML += textoOriginal.charAt(contador);
 
-            contador++;
+            destino.scrollIntoView({
 
-            setTimeout(escrever,50);
+                behavior:"smooth"
+
+            });
 
         }
 
-    }
+
+    });
 
 
-    setTimeout(escrever,800);
+});
+
+
+
+
+
+// EFEITO DE STATUS DA TELA
+
+
+const status = document.querySelector(".status");
+
+
+if(status){
+
+
+    let conectado = true;
+
+
+    setInterval(()=>{
+
+
+        conectado = !conectado;
+
+
+        if(conectado){
+
+            status.innerHTML =
+            '<span></span> Conectado';
+
+        }else{
+
+
+            status.innerHTML =
+            '<span></span> Sincronizando...';
+
+
+        }
+
+
+    },3000);
+
 
 }
 
 
 
 
-// ANO AUTOMÁTICO NO FOOTER
-
-const ano = document.querySelector("footer p");
+// ANO AUTOMÁTICO DO FOOTER
 
 
-if(ano){
+const footer = document.querySelector("footer p");
 
-    ano.innerHTML = 
+
+if(footer){
+
+    footer.innerHTML =
     "© " + new Date().getFullYear() +
     " NEXORA. Todos os direitos reservados.";
 
